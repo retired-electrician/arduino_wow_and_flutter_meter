@@ -15,3 +15,5 @@ high-frequency response which, according to DIN45507, must extend to at least 30
 8-bit Timer2 is configured to output ca. 3,150 Hz square-wave test signal (as-built, it is filtered and trimmed to be more like trapezoid). Actual
 frequency, due to 8-bit resolution, is more like 3,130 Hz.
 8-bit Timer0 is configured as an 8 kHz PWM and is currently unused. It was reserved for driving an external analogue voltmeter.
+
+photographs in operaton - https://commons.wikimedia.org/wiki/Category:Arduino-based_wow-and-flutter_meter
