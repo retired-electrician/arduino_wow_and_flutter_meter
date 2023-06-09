@@ -11,3 +11,7 @@ The computing power of Arduino is more than enough for the required simple DSP t
 an unacceptably coarse 0.04%. Thus, the timer count window is extended over 8 input cycles, or around 40,635 system clock cycles, or around 2.5 ms
 This improves resolution to less than 0.01% - a bare minimum for the job. A further increase in sampling window length would compromise the 
 high-frequency response which, according to DIN45507, must extend to at least 300 Hz.
+
+8-bit Timer2 is configured to output ca. 3,150 Hz square-wave test signal (as-built, it is filtered and trimmed to be more like trapezoid). Actual
+frequency, due to 8-bit resolution, is more like 3,130 Hz.
+8-bit Timer0 is configured as an 8 kHz PWM and is currently unused. It was reserved for driving an external analogue voltmeter.
