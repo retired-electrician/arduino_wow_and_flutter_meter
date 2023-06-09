@@ -8,6 +8,6 @@ The Arduino's 16-bit Timer1, configured in input-capture mode, watches the risin
 It skips the first seven periods of the pack; after eight complete periods, it performs calculations starting with the value of ICP1 register.
 The computing power of Arduino is more than enough for the required simple DSP task; the main limiting factors are the clock speed and the
 16-bit resolution of the available timers. A single 3,150 Hz pulse equals 5,080 clock cycles; if processed at this rate, resolution would be
-an unacceptably coars 0.04%. Thus, the timer count window is extended over 8 input cycles, or around 40,635 system clock cycles, or around 2.5 ms
+an unacceptably coarse 0.04%. Thus, the timer count window is extended over 8 input cycles, or around 40,635 system clock cycles, or around 2.5 ms
 This improves resolution to less than 0.01% - a bare minimum for the job. A further increase in sampling window length would compromise the 
 high-frequency response which, according to DIN45507, must extend to at least 300 Hz.
