@@ -1,8 +1,8 @@
 # arduino_wow_and_flutter_meter
-Arduino-based wow-and-flutter meter for testing tape recorders per DIN 45507  / IEC-386 / GOST 11948-78 and historical Japanese WRMS metric
-Requires 8-bit 16-MHz AVR board (memory sizes aren't important but clock speed is critical)
-Tested with genuine Arduino Duemilanove, noname code of Sparkfun Nano and Amperka-Iskra Nano (another clone of Arduino Nano). Output uses
-a generic 4x20 alphanumeric LCD with HD44780 controller and 4-bit parallel data bus.
+Arduino-based wow-and-flutter meter for testing tape recorders per DIN 45507  / IEC-386 / GOST 11948-78 and historical Japanese WRMS metric. 
+Requires 8-bit 16-MHz AVR board (memory sizes aren't important but clock speed is critical). Tested with genuine Arduino Duemilanove, 
+noname code of Sparkfun Nano and Amperka-Iskra Nano (another clone of Arduino Nano). Output uses  generic 4x20 alphanumeric LCD with 
+HD44780 controller and 4-bit parallel data bus.
 
 The Arduino's 16-bit Timer1, configured in input-capture mode, watches the rising edges of incoming audio frequency (3,150 Hz standard). 
 It skips the first seven periods of the pack; after eight complete periods, it performs calculations starting with the value of ICP1 register.
