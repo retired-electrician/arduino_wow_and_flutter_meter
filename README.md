@@ -16,4 +16,10 @@ high-frequency response which, according to DIN45507, must extend to at least 30
 frequency, due to 8-bit resolution, is more like 3,130 Hz.
 8-bit Timer0 is configured as an 8 kHz PWM and is currently unused. It was reserved for driving an external analogue voltmeter.
 
-photographs in operaton - https://commons.wikimedia.org/wiki/Category:Arduino-based_wow-and-flutter_meter
+* photographs in operaton - https://commons.wikimedia.org/wiki/Category:Arduino-based_wow-and-flutter_meter
+* schematic - WFmeter schematic.png - nothing special, really. A plain input amp/limiter loaded into a plain amp/Schmitt-trigger loaded into the
+arduino's analogue pin via a zener safety clamp. Two diodes, D4 and D3, raise the "ground" of the first and the second opamp stages respectively.
+The choice of opamp (here, LM358) is unimportant as long as it can reliably work in low-voltage environment and its common-mode input voltage 
+extends down to its negative rail.
+* DSP flowchart - WFmeter schematic.png - again, nothing special, a simple approximation of DIN 45507 curves. Note that there's another filter at
+the input, not shown here - a rectangular-window sampling FIR with sampling frequency of around 400 Hz (2.5 ms period).
