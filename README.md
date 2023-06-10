@@ -18,7 +18,7 @@ from the reference 3150 Hz, the filter curves would move up or down from the ref
 filter constants to actual test frequency, so that the curves would stay more or less fixed, but it's just not needed in real use.
 
 8-bit Timer2 is configured to output ca. 3,150 Hz square-wave test signal (as-built, it is filtered and trimmed to be more like trapezoid). Actual
-frequency, due to 8-bit resolution, is more like 3,130 Hz.
+frequency, due to coarse 8-bit resolution, is more like 3,130 Hz.
 
 8-bit Timer0 is configured as an 8 kHz PWM and is currently unused. It was reserved for driving an external analogue voltmeter.
 
