@@ -12,8 +12,14 @@ an unacceptably coarse 0.04%. Thus, the timer count window is extended over 8 in
 This improves resolution to less than 0.01% - a bare minimum for the job. A further increase in sampling window length would compromise the 
 high-frequency response which, according to DIN45507, must extend to at least 300 Hz.
 
+The test frequency need not be precise; the acceptable range is limited to 2100-4725 Hz (toofast_pack_clocks=27090, tooslow_pack_clocks=60952). 
+Note, however, that the filter frequencies and time constants are not fixed - they are tied to the test frequency. If it deviates considerably
+from the reference 3150 Hz, the filter curves would move up or down from the standard curves. I originally planned to add real-time adjustment of
+filter constants to test frequency, so that the curves would stay more or less fixed, but it's just not needed in real use. 
+
 8-bit Timer2 is configured to output ca. 3,150 Hz square-wave test signal (as-built, it is filtered and trimmed to be more like trapezoid). Actual
 frequency, due to 8-bit resolution, is more like 3,130 Hz.
+
 8-bit Timer0 is configured as an 8 kHz PWM and is currently unused. It was reserved for driving an external analogue voltmeter.
 
 * photographs in operaton - https://commons.wikimedia.org/wiki/Category:Arduino-based_wow-and-flutter_meter
